@@ -29,6 +29,8 @@ namespace Actividad_11_08_22
 
             persona = new Persona(nombre, Dni, Fecha);
 
+            MessageBox.Show("Los datos se cargaron de correctamente"); 
+
 
         }
 
@@ -56,27 +58,30 @@ namespace Actividad_11_08_22
 
         
 
-        private void txtFecha_Validated(object sender, EventArgs e)
-        {
-            DateTime ValidarFecha = DateTime.Parse(txtFecha.Text);
-            DateTime dateTime = DateTime.Now;
-            if (ValidarFecha > dateTime)
-            {
-                MessageBox.Show("La fecha de nacimiento es invalida");
-            }
-        }
+        
 
         private void btEdad_Click(object sender, EventArgs e)
         { 
-             persona = new Persona();
-
-            DateTime fecha = DateTime.Parse(txtFecha.Text);
-
-
-            int año = fecha.Year; 
-
-            lblEdad.Text = "Edad: "+persona.Edad(año).ToString();
              
+
+           // DateTime fecha = DateTime.Parse(txtFecha.Text);
+
+
+            //int año = fecha.Year; 
+
+            lblEdad.Text = "Edad: "+persona.Edad().ToString();
+             
+        }
+
+        private void txtFecha_Validating(object sender, CancelEventArgs e)
+        {
+            DateTime result;
+            bool ValidarFecha = DateTime.TryParse(txtFecha.Text, out result);
+
+            if (ValidarFecha == false)
+            {
+                MessageBox.Show("La fecha de nacimiento es invalida");
+            }
         }
     }
 }

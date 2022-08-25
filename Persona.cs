@@ -47,11 +47,11 @@ namespace Actividad_11_08_22
             get { return FechaNacimiento; }
         }
        
-        public int Edad(int AñoN ) 
+        public int Edad( ) 
         {
-         
+            int anioN = FechaNacimiento.Year;
             DateTime dateTime = DateTime.Today;
-            int Edad =  dateTime.Year - AñoN ;
+            int Edad =  dateTime.Year - anioN;
 
             return Edad; 
         }

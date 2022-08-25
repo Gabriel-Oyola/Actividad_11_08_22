@@ -127,7 +127,7 @@
             this.txtFecha.Size = new System.Drawing.Size(115, 20);
             this.txtFecha.TabIndex = 9;
             this.txtFecha.ValidatingType = typeof(System.DateTime);
-            this.txtFecha.Validated += new System.EventHandler(this.txtFecha_Validated);
+            this.txtFecha.Validating += new System.ComponentModel.CancelEventHandler(this.txtFecha_Validating);
             // 
             // Form1
             // 
