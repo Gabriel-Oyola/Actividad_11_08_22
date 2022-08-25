@@ -24,7 +24,7 @@ namespace Actividad_11_08_22
         {
              
             string nombre = txt_Nombre.Text;
-            int Dni = int.Parse(txtDni.Text);
+            long Dni = long.Parse(txtDni.Text);
             DateTime Fecha = DateTime.Parse(txtFecha.Text);
 
             persona = new Persona(nombre, Dni, Fecha);
@@ -73,9 +73,9 @@ namespace Actividad_11_08_22
             DateTime fecha = DateTime.Parse(txtFecha.Text);
 
 
-            int añoN = fecha.Year; 
+            int año = fecha.Year; 
 
-            lblEdad.Text = "Edad: "+persona.Edad(añoN).ToString();
+            lblEdad.Text = "Edad: "+persona.Edad(año).ToString();
              
         }
     }

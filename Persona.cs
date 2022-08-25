@@ -9,17 +9,17 @@ namespace Actividad_11_08_22
     public  class Persona
     {
         private string Nombre; 
-        private int DNI;
+        private long DNI;
         private DateTime FechaNacimiento;
 
-        
+       
 
         public Persona()
         {
 
         }
 
-        public Persona(string nombre, int Dni, DateTime fecha)
+        public Persona(string nombre, long Dni, DateTime fecha)
         {
             Nombre = nombre; 
             DNI = Dni; 
@@ -34,7 +34,7 @@ namespace Actividad_11_08_22
             get { return Nombre; }
         } 
 
-        public int PDni
+        public long PDni
         {
             set { PDni = value; }
             get { return DNI;}  
